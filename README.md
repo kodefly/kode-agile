@@ -1,2 +1,2 @@
 # kode-agile
-A software development management application based on agile 
+An application to manage your software development using the agile software development method.
