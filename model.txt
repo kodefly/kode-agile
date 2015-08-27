@@ -1,0 +1,11 @@
+TABLES      |               |               |                 |             |          |       |         |
+------      | -----         | -----         | -----           | -----       | ----     | ----- | -----   | -----
+clients     | id            | user_id       | name            | address     | phone    | email | website | memo
+projects    | id            | client_id     | name            | description | duration | memo  |         |
+backlogs    | id            | project_id    | name            | description |          |       |         |
+stories     | id            | backlog_id    | name            | description |          |       |         |
+sprints     | id            | user_id       | stories_id      | duration    |          |       |         |
+tasks       | id            | sprint_id     | user_id         | name        |          |       |         |
+attachments | id            | type          | path            |             |          |       |         |
+attachables | attachment_id | attachable_id | attachable_type |             |          |       |         |
+

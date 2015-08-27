@@ -1,0 +1,21 @@
+{
+  "name": "kode-agile",
+  "version": "0.0.0",
+  "homepage": "https://github.com/kodefly/kode-agile",
+  "authors": [
+    "shxfee <shxfee@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "rdash-ui": "~1.0.1",
+    "components-font-awesome": "~4.4.0"
+  }
+}
