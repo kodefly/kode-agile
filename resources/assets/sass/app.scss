@@ -1,3 +1,17 @@
 @import "bower_components/components-font-awesome/css/font-awesome";
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "bower_components/rdash-ui/dist/css/rdash";
+
+
+a.dropdown-toggle {
+    display: block;
+    width: 30px;
+    cursor: pointer;
+    text-align: center;
+    color: #000000;
+}
+
+
+a.dropdown-toggle:hover {
+    color: #337ab7;
+}

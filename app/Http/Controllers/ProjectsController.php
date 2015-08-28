@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Project;
+
 class ProjectsController extends Controller
 {
     /**
@@ -16,7 +18,8 @@ class ProjectsController extends Controller
      */
     public function index()
     {
-        return view('projects.index');
+        $projects = Project::all();
+        return view('projects.index', compact('projects'));
     }
 
     /**
