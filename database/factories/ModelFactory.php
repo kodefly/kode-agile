@@ -6,7 +6,7 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'client_id' => $faker->numberBetween(1, 10),
         'name' => $faker->name,
         'email' => $faker->email,
-        'password' => bcrypt(''),
+        'password' => bcrypt('password'),
         'remember_token' => str_random(10),
     ];
 });

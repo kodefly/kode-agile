@@ -16,9 +16,9 @@ class CreateProjectsTable extends Migration
             $table->increments('id');
             $table->integer('client_id')->unsigned();
             $table->string('name');
-            $table->text('description');
+            $table->text('description')->nullable();
             $table->integer('duration');
-            $table->text('memo');
+            $table->text('memo')->nullable();
             $table->timestamps();
 
             $table->foreign('client_id')->references('id')->on('clients');

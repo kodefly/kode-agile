@@ -11,8 +11,13 @@
 
           @include('partials.errors')
 
-          <form method="POST" action="{{ url('auth/login') }}">
+          <form method="POST" action="{{ url('auth/register') }}">
             {!! csrf_field() !!}
+
+            <div class="form-group">
+              {!! Form::label('name', 'Name') !!}
+              {!! Form::text('name', null, ['class' => 'form-control', 'required']) !!}
+            </div>
 
             <div class="form-group">
               {!! Form::label('email', 'Email') !!}
@@ -24,13 +29,12 @@
               {!! Form::password('password', ['class' => 'form-control', 'required']) !!}
             </div>
 
-            <div class="checkbox">
-              <label>
-                {!! Form::checkbox('remember') !!} Remember me
-              </label>
+            <div class="form-group">
+              {!! Form::label('password_confirmation', 'Confirm Password') !!}
+              {!! Form::password('password_confirmation', ['class' => 'form-control', 'required']) !!}
             </div>
 
-            <button type="submit" class="btn btn-primary">Login</button>
+            <button type="submit" class="btn btn-primary">Register</button>
 
           </form>
         </div>

@@ -4,13 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
+use App\Http\Requests\ProjectFormRequest;
 use App\Http\Controllers\Controller;
 
 use App\Project;
+use App\Client;
 
 class ProjectsController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -29,7 +31,8 @@ class ProjectsController extends Controller
      */
     public function create()
     {
-        //
+        $clients = Client::lists('name', 'id');
+        return view('projects.create', compact('clients'));
     }
 
     /**
@@ -38,9 +41,11 @@ class ProjectsController extends Controller
      * @param  Request  $request
      * @return Response
      */
-    public function store(Request $request)
+    public function store(ProjectFormRequest $request)
     {
-        //
+        Project::create($request->all());
+        return redirect()->route('projects.index')
+            ->with('message', 'New project created.');
     }
 
     /**

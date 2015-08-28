@@ -5,7 +5,8 @@ paths = {
     'jquery': './bower_components/jquery/dist/',
     'rdash': './bower_components/rdash-ui/dist/',
     'bootstrap': './node_modules/bootstrap-sass/assets/',
-    'fontawesome' : './bower_components/components-font-awesome/'
+    'fontawesome' : './bower_components/components-font-awesome/',
+    'jquery_knob' : './bower_components/aterrien/jQuery-Knob/'
 }
 
 elixir(function(mix) {
@@ -15,6 +16,7 @@ elixir(function(mix) {
        .copy(paths.fontawesome + 'fonts/**', 'public/fonts')
        .scripts([
             paths.jquery + "jquery.js",
-            paths.bootstrap + "javascripts/bootstrap.js"
+            paths.bootstrap + "javascripts/bootstrap.js",
+            paths.jquery_knob + "js/jquery.knob.js"
        ]);
 });

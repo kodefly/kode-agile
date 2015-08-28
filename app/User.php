@@ -38,4 +38,10 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     {
         return $this->belongsTo('App\Client');
     }
+
+
+    public function hasRole($role)
+    {
+        return $this->role == $role;
+    }
 }

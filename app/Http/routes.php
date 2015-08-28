@@ -11,8 +11,15 @@
 |
 */
 
-Route::get('/', 'ProjectsController@index');
-Route::resource('projects', 'ProjectController');
+Route::group(['middleware' => ['role:developer']], function(){
+    Route::get('/', 'ProjectsController@index');
+    Route::resource('projects', 'ProjectsController');
+});
+
+
+Route::get('unauthorized', function() {
+    return view('auth.unauthorized');
+});
 
 
 // Authentication routes...

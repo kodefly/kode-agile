@@ -4,7 +4,7 @@
 <div id="page-wrapper" class="open">
 
   <!-- Sidebar -->
-  @include('sidebar')
+  @include('partials.sidebar')
   <!-- End Sidebar -->
 
   <div id="content-wrapper">
@@ -19,16 +19,13 @@
             <div class="dropdown item">
               <a href="#" class="dropdown-toggle" id="avatarDropdown" data-toggle="dropdown"
                 ariahaspopup="true" aria-expand="true">
-                <img src="img/avatar.jpg">
+                <img src="/img/avatar.jpg">
               </a>
               <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="avatarDropdown">
-                <li class="dropdown-header">Joe Bloggs</li>
+                <li class="dropdown-header">{{ Auth::user()->name }}</li>
                 <li class="divider"></li>
-                <li class="link"><a href="#">Profile</a></li>
-                <li class="link"> <a href="#">Menu Item</a></li>
 
-                <li class="divider"></li>
-                <li class="link"><a href="#">Logout</a></li>
+                <li class="link"><a href="{{ url('auth/logout') }}">Logout</a></li>
               </ul>
             </div>
 
@@ -69,5 +66,11 @@
   </div><!-- End Page Wrapper -->
 
   <script src="/js/all.js"></script>
+  <script>
+    $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+    });
+  </script>
+  @yield('scripts.footer')
 </body>
 </html>

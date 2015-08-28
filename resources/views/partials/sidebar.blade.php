@@ -5,11 +5,17 @@
     </a>
     </li>
     <li class="sidebar-title"><span>NAVIGATION</span></li>
-    <li class="sidebar-list">
-    <a href="#">Projects <span class="menu-icon fa fa-tachometer"></span></a>
+    <li class="sidebar-list" class="current">
+    <a href="#">Projects <span class="menu-icon fa fa-bars"></span></a>
     </li>
     <li class="sidebar-list">
-    <a href="#">Settings <span class="menu-icon fa fa-tachometer"></span></a>
+      <a href="#">Sprints <span class="menu-icon fa fa-tachometer"></span></a>
+    </li>
+    <li class="sidebar-list">
+      <a href="#">User Management <span class="menu-icon fa fa-user"></span></a>
+    </li>
+    <li class="sidebar-list">
+      <a href="#">Settings <span class="menu-icon fa fa-cog"></span></a>
     </li>
   </ul>
   <!--

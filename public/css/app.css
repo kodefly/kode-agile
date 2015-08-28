@@ -8479,4 +8479,21 @@ a.dropdown-toggle {
 a.dropdown-toggle:hover {
   color: #337ab7; }
 
+body.auth {
+  padding-top: 100px; }
+
+.progress-container {
+  position: relative;
+  height: 100px; }
+
+.progress-outter {
+  position: absolute;
+  right: 10px;
+  top: 0px; }
+
+.progress-inner {
+  position: absolute;
+  right: 32px;
+  top: 22px; }
+
 /*# sourceMappingURL=app.css.map */

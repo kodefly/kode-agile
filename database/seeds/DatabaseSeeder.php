@@ -32,8 +32,22 @@ class FactorySeeder extends Seeder
         factory(App\User::class, 20)->create();
         factory(App\Project::class, 20)->create();
         factory(App\Client::class, 10)->create();
+
+        App\User::create([
+            'role' => 'developer',
+            'name' => 'developer',
+            'email' => 'developer@gmail.com',
+            'password' => bcrypt('password'),
+            'remember_token' => str_random(10),
+        ]);
+
+        App\User::create([
+            'client_id' => 1,
+            'role' => 'client',
+            'name' => 'developer',
+            'email' => 'client@gmail.com',
+            'password' => bcrypt('password'),
+            'remember_token' => str_random(10),
+        ]);
     }
 }
-
-
-
