@@ -14,9 +14,9 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "~2.1.4",
-    "rdash-ui": "~1.0.1",
+    "aterrien/jQuery-Knob": "jknob#~1.2.11",
     "components-font-awesome": "~4.4.0",
-    "aterrien/jQuery-Knob": "~1.2.11"
+    "jquery": "~2.1.4",
+    "rdash-ui": "~1.0.1"
   }
 }

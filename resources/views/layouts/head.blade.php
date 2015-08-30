@@ -7,5 +7,5 @@
 
   <title>Dashboard</title>
 
-  <link href="/css/app.css" rel="stylesheet">
+  <link href="{{ url('css/app.css') }}" rel="stylesheet">
 </head>

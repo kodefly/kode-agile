@@ -58,7 +58,7 @@
     </div><!-- End Content Wrapper -->
   </div><!-- End Page Wrapper -->
 
-  <script src="/js/all.js"></script>
+  <script src="{{ url('js/all.js') }}"></script>
   @yield('scripts.footer')
 </body>
 </html>
