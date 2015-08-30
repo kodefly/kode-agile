@@ -8,6 +8,7 @@ use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
 
+
 class User extends Model implements AuthenticatableContract, CanResetPasswordContract
 {
     use Authenticatable, CanResetPassword;
@@ -37,6 +38,22 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     public function client()
     {
         return $this->belongsTo('App\Client');
+    }
+
+
+    public function backlogs()
+    {
+        return $this->hasMany('App\Backlog');
+    }
+
+    /*
+     * User has many comments
+     *
+     * @return App\Comment
+     */
+    public function comments()
+    {
+        return $this->hasMany('App\Comment');
     }
 
 

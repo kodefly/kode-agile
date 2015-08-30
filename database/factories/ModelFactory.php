@@ -31,5 +31,15 @@ $factory->define(App\Project::class, function (Faker\Generator $faker) {
         'description' => $faker->sentence(15),
         'duration' => $faker->numberBetween(30, 120),
         'memo' => $faker->text(20),
+        'start_date' => $faker->dateTimeBetween('-6 months', 'now'),
+    ];
+});
+
+
+$factory->define(App\Backlog::class, function (Faker\Generator $faker) {
+    return [
+        'project_id' => $faker->numberBetween(1, 20),
+        'user_id' => $faker->numberBetween(1, 3),
+        'title' => $faker->sentence(5),
     ];
 });

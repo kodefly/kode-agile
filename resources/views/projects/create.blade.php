@@ -1,5 +1,19 @@
 @extends('layouts.master')
 
+<!-- breadcrumbs -->
+@section('breadcrumbs')
+  <div class="meta">
+    <div class="page">
+      Projects
+    </div>
+    <div class="breadcrumb-links">
+      <a href="{{ route('home') }}">Home</a> / 
+      <a href="{{ route('projects.index') }}">Projects</a> /
+      Create Project
+    </div>
+  </div>
+@endsection
+
 @section('content')
 
   <div class="row">
@@ -9,42 +23,12 @@
         <div class="widget-body">
           @include('partials.errors')
 
-          {!! Form::open(['route' => ['projects.store']]) !!}
+          {!! Form::model($project = (new \App\Project), ['route' => ['projects.store']]) !!}
 
-          <div class="row">
-            <div class="col-md-6">
-              <div class="form-group">
-                {!! Form::label('name', 'Project Name') !!}
-                {!! Form::text('name', null, ['class' => 'form-control', 'required']) !!}
-              </div>
-            </div>
-            <div class="col-md-3">
-              <div class="form-group">
-                {!! Form::label('duration', 'Duration') !!}
-                {!! Form::text('duration', null, ['class' => 'form-control', 'required']) !!}
-              </div>
-            </div>
-            <div class="col-md-3">
-                <div class="form-group">
-                    {!! Form::label('client_id', 'Client') !!}
-                    {!! Form::select('client_id', $clients, null, ['class' => 'form-control', 'required']) !!}
-                </div>
-            </div>
-          </div>
+          @include('projects.form')
 
           <div class="row">
             <div class="col-md-12">
-              <div class="form-group">
-                {!! Form::label('Description', 'Description') !!}
-                {!! Form::textarea('Description', null, ['class' => 'form-control']) !!}
-              </div>
-
-
-              <div class="form-group">
-                {!! Form::label('memo', 'Memo') !!}
-                {!! Form::textarea('memo', null, ['class' => 'form-control']) !!}
-              </div>
-
               <button type="submit" class="btn btn-primary">Create Project</button>
             </div>
           </div>

@@ -11,10 +11,34 @@
 |
 */
 
-Route::group(['middleware' => ['role:developer']], function(){
-    Route::get('/', 'ProjectsController@index');
-    Route::resource('projects', 'ProjectsController');
-});
+Route::get('/', ['as' => 'home', function() {
+    return redirect()->route('projects.index');
+}]);
+
+
+Route::get('projects/{projects}/backlogs', [
+    'as'   => 'projects.backlogs.index',
+    'uses' => 'ProjectsController@backlogs',
+]);
+
+Route::post('backlogs', [
+    'as'   => 'backlogs.store',
+    'uses' => 'BacklogsController@store',
+]);
+
+Route::post('comments', [
+    'as' => 'comments.store',
+    'uses' => 'CommentsController@store',
+]);
+
+Route::resource('backlogs.sprints', 'BacklogsSprintsController', [
+    'except' => ['index', 'destroy', 'update', 'edit']
+]);
+
+Route::resource('projects', 'ProjectsController', [
+    'except' => ['show', 'destroy']
+]);
+
 
 
 Route::get('unauthorized', function() {
@@ -30,3 +54,6 @@ Route::get('auth/logout', 'Auth\AuthController@getLogout');
 // Registration routes...
 Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', 'Auth\AuthController@postRegister');
+
+
+

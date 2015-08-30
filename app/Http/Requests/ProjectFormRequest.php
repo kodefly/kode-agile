@@ -24,9 +24,10 @@ class ProjectFormRequest extends Request
     public function rules()
     {
         return [
-            'client_id' => 'required',
-            'name'      => 'required|min:3',
-            'duration'  => 'required|integer',
+            'client_id'  => 'required',
+            'name'       => 'required|min:3',
+            'duration'   => 'required|integer',
+            'start_date' => 'required|date',
         ];
     }
 }

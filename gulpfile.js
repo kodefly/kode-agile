@@ -17,6 +17,7 @@ elixir(function(mix) {
        .scripts([
             paths.jquery + "jquery.js",
             paths.bootstrap + "javascripts/bootstrap.js",
-            paths.jquery_knob + "js/jquery.knob.js"
+            paths.jquery_knob + "js/jquery.knob.js",
+            'app.js'
        ]);
 });

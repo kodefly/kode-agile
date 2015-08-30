@@ -19,6 +19,9 @@ class CreateProjectsTable extends Migration
             $table->text('description')->nullable();
             $table->integer('duration');
             $table->text('memo')->nullable();
+            $table->boolean('completed')->default(false);
+            $table->timestamp('start_date');
+            $table->timestamp('end_date')->nullable();
             $table->timestamps();
 
             $table->foreign('client_id')->references('id')->on('clients');

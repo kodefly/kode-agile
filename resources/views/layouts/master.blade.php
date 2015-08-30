@@ -46,14 +46,7 @@
             </div>
           </div>
 
-          <div class="meta">
-            <div class="page">
-              Dashboard
-            </div>
-            <div class="breadcrumb-links">
-              Home / Dashboard
-            </div>
-          </div>
+          @yield('breadcrumbs')
         </div>
       </div>
 
@@ -66,11 +59,6 @@
   </div><!-- End Page Wrapper -->
 
   <script src="/js/all.js"></script>
-  <script>
-    $(function () {
-      $('[data-toggle="tooltip"]').tooltip()
-    });
-  </script>
   @yield('scripts.footer')
 </body>
 </html>

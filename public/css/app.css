@@ -8469,22 +8469,12 @@ ul.sidebar .sidebar-list .menu-icon {
   font-size: 28px;
   display: block; }
 
-a.dropdown-toggle {
-  display: block;
-  width: 30px;
-  cursor: pointer;
-  text-align: center;
-  color: #000000; }
-
-a.dropdown-toggle:hover {
-  color: #337ab7; }
-
 body.auth {
   padding-top: 100px; }
 
 .progress-container {
   position: relative;
-  height: 100px; }
+  height: 120px; }
 
 .progress-outter {
   position: absolute;
@@ -8495,5 +8485,25 @@ body.auth {
   position: absolute;
   right: 32px;
   top: 22px; }
+
+.shadow:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  cursor: pointer; }
+
+a.dropdown-toggle {
+  display: block;
+  width: 30px;
+  cursor: pointer;
+  text-align: center;
+  color: #000000; }
+
+a.dropdown-toggle:hover {
+  color: #337ab7; }
+
+.inline-form-submit {
+  padding-top: 24px; }
+
+.no-show {
+  display: none; }
 
 /*# sourceMappingURL=app.css.map */
